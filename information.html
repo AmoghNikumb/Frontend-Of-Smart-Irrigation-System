@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Irrigation System</title>
+    <style>
+        html, body {
+            height: 175%;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: linear-gradient(to bottom, #87CEFA, #f5f5f5);
+            color: #333;
+        }
+        header {
+            background-color: #ffffff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        header h1 { color: #333; margin: 0; }
+        nav {
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .content { padding: 50px 20px; text-align: center; }
+        .content h2 { font-size: 2.5em; color: #228B22; }
+        .content p { font-size: 1.2em; line-height: 1.8em; color: #555; text-align: justify; }
+        .info-section {
+            max-width: 1000px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .card {
+            background: #f9f9f9;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: left;
+        }
+        .table-container {
+            overflow-x: auto;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+        }
+        th { background-color: #4CAF50; color: white; }
+        footer {
+            background-color: #f4f4f4;
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Smart Irrigation System</h1>
+        <nav>
+            <a href="home.html">Home</a>
+            <a href="information.html">Information</a>
+            <a href="control.html">Irrigation Control</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <div class="content">
+        <div class="info-section">
+            <h2>Information</h2>
+            <div class="card">
+            <p>The Smart Irrigation System is an advanced, IoT-enabled solution designed to optimize agricultural water management by integrating real-time soil moisture monitoring, automated irrigation control, and remote accessibility. This system effectively supports multiple crop types by leveraging Arduino Mega as the primary microcontroller and Arduino Uno for supplementary functions, ensuring seamless hardware operation. A user-friendly web interface, powered by Wi-Fi module connectivity, allows farmers to monitor and control irrigation remotely. By utilizing soil moisture sensors, the system dynamically adjusts water delivery based on the crop’s specific needs, significantly reducing water wastage while maximizing crop yield. The integration of two microcontrollers provides a cost-effective and scalable solution for efficient data capturing and decision-making. The system's web-based dashboard, connected through IoT infrastructure, enables farmers to access real-time soil moisture levels, irrigation status, and critical environmental parameters from any location. This research highlights the importance of precision agriculture, showcasing how smart irrigation systems can effectively tackle issues such as water scarcity, inefficient irrigation practices, and labor-intensive monitoring. The following sections delve into the importance of threshold values, key influencing parameters, ideal moisture levels for various crops, and how maintaining these thresholds enhances agricultural efficiency. 
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Understanding Threshold Values</h3>
+                <p>The threshold value in an irrigation system represents the <strong>minimum soil moisture level</strong> required before irrigation is triggered. It ensures <strong>optimal crop health</strong> and prevents overwatering.</p>
+            </div>
+
+            <div class="card">
+                <h3>Factors Affecting Moisture Threshold</h3>
+                <ul>
+                    <li><strong>Crop Type 🌾</strong> – Different crops need different moisture levels.</li>
+                    <li><strong>Soil Type 🌱</strong> – Sandy soil drains faster; clayey soil retains moisture.</li>
+                    <li><strong>Climate ☀️</strong> – Temperature and rainfall affect soil moisture.</li>
+                    <li><strong>Growth Stage 🌿</strong> – Young plants need more frequent watering.</li>
+                    <li><strong>Evapotranspiration 💧</strong> – The loss of water through evaporation & transpiration.</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>Threshold Moisture Levels for Crops</h3>
+                <div class="table-container">
+                    <table>
+                        <tr>
+                            <th>Crop</th>
+                            <th>Ideal Moisture Threshold (%)</th>
+                            <th>Additional Info</th>
+                        </tr>
+                        <tr><td>Wheat 🌾</td><td>20–30%</td><td>Moderate irrigation needed.</td></tr>
+                        <tr><td>Rice 🌾</td><td>70–85%</td><td>Prefers flooded conditions.</td></tr>
+                        <tr><td>Jowar 🌿</td><td>30–40%</td><td>Drought-tolerant, needs moisture at germination.</td></tr>
+                        <tr><td>Bajra 🌱</td><td>25–35%</td><td>Requires moisture at flowering.</td></tr>
+                        <tr><td>Maize 🌽</td><td>30–40%</td><td>Needs high moisture at flowering.</td></tr>
+                        <tr><td>Tomato 🍅</td><td>60–80%</td><td>Needs consistent moisture.</td></tr>
+                        <tr><td>Cotton 🌿</td><td>25–35%</td><td>Moderate irrigation required.</td></tr>
+                        <tr><td>Sugarcane 🎍</td><td>60–80%</td><td>Needs high water content.</td></tr>
+                    </table>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>Importance of Threshold Management</h3>
+                <ul>
+                    <li>✔️ Prevents <strong>water wastage</strong> by irrigating only when necessary.</li>
+                    <li>✔️ Enhances <strong>crop yield</strong> by maintaining optimal moisture levels.</li>
+                    <li>✔️ Conserves <strong>energy</strong> by reducing unnecessary pump operation.</li>
+                    <li>✔️ Minimizes <strong>plant stress</strong> from overwatering or drought.</li>
+                </ul>
+            
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>Smart Irrigation System &copy; 2025 | Designed for Efficient Water Management</p>
+    </footer>
+</body>
+</html>
